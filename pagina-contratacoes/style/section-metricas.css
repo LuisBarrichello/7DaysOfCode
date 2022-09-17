@@ -1,0 +1,36 @@
+/*VARIAVEIS*/
+:root {
+    --text-color: #667085;
+    --main-color: #8e2424;
+    --text-color-h6: #101828;
+}
+
+.metricas-container {
+    width: 100%;
+    height: 32vh;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.metricas-container h2 {
+    font-weight: 600;
+    font-size: 60px;
+    color: var(--main-color);
+}
+
+.metricas-container h6 {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--text-color-h6);
+}
+
+.metricas-container p {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.card-metrica {
+    width: 20%;
+}
