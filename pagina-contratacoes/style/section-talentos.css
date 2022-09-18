@@ -1,0 +1,57 @@
+/*VARIAVEIS*/
+:root {
+    --text-color: #667085;
+    --main-color: #8e2424;
+    --text-color-h: #101828;
+}
+
+.container-talentos {
+    width: 100%;
+}
+
+.container-subtitulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitulo {
+    width: 7.813rem;
+    height: 1.75rem;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--main-color);
+    text-align: center;
+    background: rgba(142, 36, 36, 0.05);
+    border-radius: 16px;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-talentos {
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    color: var(--text-color-h);
+    line-height: 44px;
+    margin-bottom: 0.4em;
+}
+
+.descritivo-talentos {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 3em;
+}
+
+.container-talentos img {
+    width: 80%;
+    margin: auto;
+    display: block;
+}
