@@ -1,0 +1,59 @@
+/*VARIAVEIS*/
+:root {
+    --text-color: #667085;
+    --main-color: #8e2424;
+    --text-color-h: #101828;
+}
+
+.vagas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-vagas {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 64px 64px 0px 64px;
+}
+
+.titulo-area {
+    width: 100%;
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--text-color-h);
+}
+
+.vaga {
+    width: 100%;
+    padding: 24px 24px 28px;
+    border: 1px solid #EAECF0;
+    border-radius: 16px;
+    margin-bottom: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;;
+}
+
+.titulo-vaga {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--text-color-h);
+    line-height: 28px;
+    margin-bottom: 32px;
+}
+
+.informacoes span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-color);
+    margin-right: 24px;
+}

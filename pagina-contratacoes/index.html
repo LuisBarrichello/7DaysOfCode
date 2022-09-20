@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,17 @@
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/section-metricas.css">
     <link rel="stylesheet" href="style/section-talentos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Italianno&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/vagas.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Italianno&family=Montserrat:wght@500&display=swap"
+        rel="stylesheet">
+    <!--favicon link para colcoar logo na aba do navegador-->
+    <!--cor de tema; <meta name="teheme-color" content=#color> -->
     <title>Contratações</title>
 </head>
+
 <body>
+    <!--Menu de navegação-->
     <nav class="navbar">
         <div class="container">
             <img class="logo" src="/pagina-contratacoes/img/logo.svg" alt="logo">
@@ -33,15 +41,20 @@
             </div>
             <div class="buttons">
                 <button type="button" class="button-entrar">Entrar</button>
-            <button type="button" class="button-cadastrar">Cadastrar</button>
+                <button type="button" class="button-cadastrar">Cadastrar</button>
             </div>
         </div>
     </nav>
+
+    <!--Cabeçalho da página-->
     <header class="cabeçalho">
         <h4 class="sobre">Sobre nós</h4>
         <h1 class="titulo-main">Por que somos diferentes?</h1>
-        <p class="paragrafo-main">Nós focamos nos detalhes de tudo que fazemos. Tudo para ajudar as empresas de todo o mundo a se concentrarem naquilo que é realmente importante para elas.</p>
+        <p class="paragrafo-main">Nós focamos nos detalhes de tudo que fazemos. Tudo para ajudar as empresas de todo o
+            mundo a se concentrarem naquilo que é realmente importante para elas.</p>
     </header>
+
+    <!--Seção das metricas da empresa-->
     <section class="metricas-container">
         <div class="card-metrica metrica-1">
             <h2>400+</h2>
@@ -64,6 +77,8 @@
             <p>Estamos orgulhosos de contar com mais de 500 review 5 estrelas em nossos produtos.</p>
         </div>
     </section>
+
+    <!--Seção apresentação antes das vagas-->
     <section class="container-talentos">
         <div class="container-subtitulo">
             <p class="subtitulo">Vagas abertas!</p>
@@ -72,5 +87,56 @@
         <p class="descritivo-talentos">Somos uma equipe 100% remota com pessoas do Brasil inteiro.</p>
         <img src="img/ilustracao.png" alt="">
     </section>
+
+    <!--Seção de vagas-->
+    <section class="vagas">
+        <div class="container-vagas">
+            <h3 class="titulo-area">Design</h3>
+            <div class="vaga">
+                <span class="titulo-vaga">Product Designer</span>
+                <div class="informacoes">
+                    <span>Full-time</span>
+                    <span>Faixa salarial: R$7.000</span>
+                </div>
+            </div>
+
+            <div class="vaga">
+                <span class="titulo-vaga">UX Designer</span>
+                <div class="informacoes">
+                    <span>Full-time</span>
+                    <span>Faixa salarial: R$6.000</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-vagas">
+            <h3 class="titulo-area">Desenvolvimento de Software</h3>
+            <div class="vaga">
+                <span class="titulo-vaga">Desenvolvedor(a) iOS</span>
+                <div class="informacoes">
+                    <span>Full-time</span>
+                    <span>Faixa salarial: R$8.000</span>
+                </div>
+            </div>
+
+            <div class="vaga">
+                <span class="titulo-vaga">Desenvolvedor(a) Front-end</span>
+                <div class="informacoes">
+                    <span>Full-time</span>
+                    <span>Faixa salarial: R$7.000</span>
+                </div>
+            </div>
+
+            <div class="vaga">
+                <span class="titulo-vaga">Desenvolvedor(a) Back-end</span>
+                <div class="informacoes">
+                    <span>Full-time</span>
+                    <span>Faixa salarial: R$8.000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
+
 </html>
