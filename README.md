@@ -43,4 +43,4 @@ O escopo do projeto é: OptimusTech quer desenvolver uma página destinada a nov
 
 * [Figma](https://www.figma.com/file/mm3MLozvUDGhDRTxSLlGL5/7daysOfCode-HTML-CSS?node-id=0%3A1)
 
-* [Projeto](../../../../../../../pagina-contratacoes/img/unnamed.gif); 
+* [Projeto](../7DaysOfCode/pagina-contratacoes/img/unnamed.gif); 
