@@ -38,9 +38,6 @@ O escopo do projeto é: OptimusTech quer desenvolver uma página destinada a nov
 * HTML5
 * CSS3
 
+![Página Optimus Tech](./pagina-contratacoes/img/unnamed.gif "Página Optimus Tech")
 
-![Página Optimus Tech](./HTML_CSS/images/optimus_tech.gif?raw=true "Página Optimus Tech")
-
-* [Figma](https://www.figma.com/file/mm3MLozvUDGhDRTxSLlGL5/7daysOfCode-HTML-CSS?node-id=0%3A1)
-
-* [Projeto](\pagina-contratacoes\img\unnamed.gif) 
+* [Figma](https://www.figma.com/file/mm3MLozvUDGhDRTxSLlGL5/7daysOfCode-HTML-CSS?node-id=0%3A1) 
