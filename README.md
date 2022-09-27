@@ -19,7 +19,7 @@ Melhorar as habilidades de lógica de programação fazendo mini-projetos diári
 
 ### Lógica de Programação com Javascript
 
-*   [Dia 001 - Trabalhando com Operadores Lógicos em Javascript](https://github.com/lizvidotti91/7-days-of-code/tree/main/Javascript/Dia%20001); 
+*   Dia 001 - Trabalhando com Operadores Lógicos em Javascript
 
 
 ## HTML e CSS - Landingpage
