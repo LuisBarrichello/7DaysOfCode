@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        - if e o else, são capazes de criar ramificações dentro da aplicação para que seja tomada uma ou outra ação, dependendo da condição fornecida.
+        - loops (como for e while) são capazes de fazer uma tarefa repetitiva se transformar em poucas linhas de código, independente de quantas vezes você precisar repetir aquela tarefa.
+
+        DESAFIO: é criar os destinos possíveis de um jogo, em que o usuário consiga escolher:
+
+        1. Se quer seguir para área de Front-End ou seguir para a área de Back-End.
+
+        2. Caso esteja na área de Front-End, se quer aprender React ou aprender Vue. Caso esteja na área de Back-End, poderá aprender C# ou aprender Java.
+
+        3. Depois, independente das escolhas anteriores, o usuário poderá escolher entre seguir se especializando na área escolhida ou seguir se desenvolvendo para se tornar Fullstack. Você deve exibir na tela uma mensagem específica para cada escolha.
+
+        4. Por fim, pergunte quais são as tecnologias nas quais a pessoa gostaria de se especializar ou de conhecer. Aqui, a pessoa pode responder N tecnologias, uma de cada vez. Então, enquanto ela continuar respondendo ok para a pergunta: "Tem mais alguma tecnologia que você gostaria de aprender?", continue apresentando para ela o Prompt, para que ela complete o nome da tecnologia em questão. E, logo depois, apresente uma mensagem comentando algo sobre a linguagem inserida.
+        */
+
+        alert('Escolha sua área');
+        const nome = prompt('Olá, tudo bem? Qual é o seu nome?');
+        alert('Prazer em te conhecer ' + nome);
+        const area = prompt(nome + ' qual area deseja seguir na carreira de Dev? Quer seguir para área de Front-End ou seguir para a área de Back-End?');
+
+        if (area == "Front-End" || area == 'front-end' || area == 'front') {
+            alert('poderá aprender React ou aprender Vue.');
+        } else if (area == "Back-End" || area == 'back-end' || area == 'back') {
+            alert('poderá aprender C# ou aprender Java.');
+        }
+
+        const especializacao = prompt(nome + ' deseja seguir na area de ' + area + ' ou seguir se desenvolvendo para se tornar Fullstack?');
+        alert('Uau, que legal que deseja seguir em ' + especializacao);
+
+        let i = 0;
+        while (i < 1) {
+
+            const aprenderMais = prompt(nome + ' quais são as tecnologias nas quais você gostaria de se especializar ou conhecer? [python, C#, javascript, C++, Java, SQL, ou outras]')
+            if ( aprenderMais == 'python') {
+                alert("Python é uma linguagem de uso geral, que pode ser utilizada para diversas aplicações. Apresenta uma sintaxe simples, tornando os programas mais legíveis, o que também facilita o aprendizado da linguagem. Possui listas, dicionários e tuplas como estruturas de dados pré-definidas.");
+            }
+            if (aprenderMais == 'c++') {
+                alert("O C++ é uma linguagem de programação de nível médio, baseada na linguagem C. O desenvolvimento da linguagem começou na década de 80, por Bjarne Stroustrup. O objetivo do desenvolvimento desta linguagem era melhorar uma versão do núcleo Unix.");
+            } else if (aprenderMais == 'C#' || aprenderMais == 'javascript' || aprenderMais == 'Java' || aprenderMais == 'SQL') {
+                alert('Quel legal!')
+            }
+
+            const maisTech = prompt('Tem mais alguma tecnologia que você gostaria de aprender? [sim, não]');
+            if (maisTech == "sim") {
+                let outrasTech = prompt("Quais linguagens?")
+                if (outrasTech != ' ') {
+                    alert('Continue se esforçando, estudando e praticando muito que você terá sucesso ' + nome)
+                }
+                alert('Obrigado por participar!!')                
+                i = 1
+            } else {
+                alert('Obrigado por participar!!')
+                i = 1
+            }
+            
+        }
+    </script>
+</body>
+</html>
