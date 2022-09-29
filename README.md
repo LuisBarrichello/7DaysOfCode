@@ -27,7 +27,7 @@ Melhorar as habilidades de lógica de programação fazendo mini-projetos diári
 *   Dia 006 - Trabalhando com remoção de Arrays em Javascript;
 *   Dia 007 - Trabalhando com Funções em Javascript;
 
-
+<br>
 ## HTML e CSS - Landingpage
 
 ##  Objetivo
