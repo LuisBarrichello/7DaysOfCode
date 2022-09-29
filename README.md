@@ -20,6 +20,12 @@ Melhorar as habilidades de lógica de programação fazendo mini-projetos diári
 ### Lógica de Programação com Javascript
 
 *   Dia 001 - Trabalhando com Operadores Lógicos em Javascript
+*   Dia 002 - Trabalhando com Variáveis em Javascript;
+*   Dia 003 - Trabalhando com Fluxo de Decisão em Javascript;
+*   Dia 004 - Trabalhando Loops e Randomização em Javascript;
+*   Dia 005 - Trabalhando com Arrays e Coleções em Javascript;
+*   Dia 006 - Trabalhando com remoção de Arrays em Javascript;
+*   Dia 007 - Trabalhando com Funções em Javascript;
 
 
 ## HTML e CSS - Landingpage
@@ -40,10 +46,4 @@ O escopo do projeto é: OptimusTech quer desenvolver uma página destinada a nov
 
 ![Página Optimus Tech](./pagina-contratacoes/img/unnamed.gif "Página Optimus Tech")
 
-<<<<<<< HEAD
-![Página Optimus Tech](./pagina-contratacoes/img/unnamed.gif "Página Optimus Tech")
-
-* [Figma](https://www.figma.com/file/mm3MLozvUDGhDRTxSLlGL5/7daysOfCode-HTML-CSS?node-id=0%3A1)
-=======
 * [Figma](https://www.figma.com/file/mm3MLozvUDGhDRTxSLlGL5/7daysOfCode-HTML-CSS?node-id=0%3A1) 
->>>>>>> 49ea37b904c205894ad844606ab3fec6d1390bb1
