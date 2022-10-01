@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+
+        DESAFIO: 
+        - criar um programinha que comece com um valor específico pré-definido entre 0 a 10 para o número que você vai adivinhar (7, por exemplo).
+        - Em seguida, o programa vai perguntar para você qual o valor que você deseja chutar e, caso você acerte, ele irá te parabenizar. Caso erre, ele vai te dar mais 2 tentativas.
+        - Caso você não acerte nenhuma vez, ele vai imprimir qual era o número inicial. 
+        */
+
+        let randomNumber = Math.floor(Math.random() * (10 - 0) + 0);
+
+        alert('Você já brincou de tentar adivinhar o número que seu amigo ou amiga estava pensando? Hoje você vai voltar na infância e fazer exatamente isso. Mas agora, o jogo vai ser contra o próprio computador!');
+        for (let i = 0; i <= 2; i++) {
+            var jogada = prompt('Digite um numero de 0 a 10: ');
+            if (jogada == randomNumber) {
+                alert(`Parabéns, você acertou!! O número era ${randomNumber}`)
+                break;
+            } else if ( i <= 1) {
+                alert('Tente novamente!!');
+            };
+
+            if (i == 2 ) {
+                alert(`Infelizmente, você não acertou. O número era ${randomNumber}.`);
+            };
+            
+        }
+
+
+
+    </script>
+
+</body>
+</html>

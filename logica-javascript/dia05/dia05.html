@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        DESAFIO:
+        - Criar um programa em Javascript que perguntará se você deseja adicionar uma comida na sua lista de compras, e você deve poder responder com sim ou não
+        - Em seguida, ele perguntará qual comida você deseja inserir, e você digitará o nome dela, como por exemplo batata.
+        - Depois, ele deverá perguntar em qual categoria essa comida se encaixa, com algumas opções já pré-definidas, como frutas, laticínios, congelados, doces e o que mais você achar interessante.
+        - Por fim, caso você não queira mais adicionar nada na lista de compras e responder não na primeira pergunta, ele irá exibir uma lista com todos os itens agrupados, da seguinte forma:
+            Caso você adicione na sua lista:
+            banana, leite em pó, tomate, leite vegetal, chiclete, bala de ursinho, maçã, uva, abacate e leite de vaca
+
+            O programa deverá imprimir, por exemplo:
+
+            Lista de compras:
+                Frutas: banana, tomate, maçã, uva, abacate
+                Laticínios: leite vegetal, leite de vaca, leite em pó
+                Congelados:
+                Doces: chiclete e bala de ursinho
+
+        Para esse desafios será utilizado objeto que é usado justamente para criar listas de elementos, chamado Array
+
+        comentario: tive dificuldade em construir o laço, irei treinar mais a contrução de laços de repetição
+
+        */
+
+        alert('Crie sua lista de compras e divida em categorias')
+        
+        const categoriaFrutas = [];
+        const categoriaLaticínios = [];
+        const categoriaVerduras = [];
+        const categoriaDoces = [];
+        const categoriaOutros = [];
+
+        let adicionarNaLista = "sim";  // valor inicial como "sim", porque a primeira vez sempre vai entrar no while
+        while (adicionarNaLista != 'não') {
+
+            let adicionarNaLista = prompt('Você deseja adicionar uma comida na sua lista de compras? Você deve poder responder com SIM ou NÃO');
+
+            if (adicionarNaLista === "não" || adicionarNaLista === 'nao' ){  //se o texto lido for "não", sair do while
+                break;
+            }
+
+            var item = prompt('Qual comida você deseja inserir a lista?');
+            var categoria = prompt('Escolha um categoria para classificar a comida, entre elas pode escolher entre: Frutas, Laticínios, Verduras, Doces, Outros.');
+
+            if (categoria == 'frutas') {
+                categoriaFrutas.push(item)
+            }
+            
+            if (categoria == 'laticínios' || categoria == 'laticinios' ) {
+                categoriaLaticínios.push(item)
+            }
+
+            if (categoria == 'verduras') {
+                categoriaVerduras.push(item)
+            }
+
+            if (categoria == 'doces') {
+                categoriaDoces.push(item)
+            }
+
+            if(categoria == 'outros') {
+                categoriaOutros.push(item)
+            }
+        }
+
+        alert(`Sua lista de compras:\n Frutas: ${categoriaFrutas};\n nLaticínios: ${categoriaLaticínios};\n Verduras: ${categoriaVerduras};\n Doces: ${categoriaDoces};\n Outros: ${categoriaOutros}.`)
+
+
+    </script>
+</body>
+</html>
