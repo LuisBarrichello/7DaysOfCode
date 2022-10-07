@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        DESAFIO:
+        - Criar um programa em Javascript que perguntará se você deseja adicionar uma comida na sua lista de compras, e você deve poder responder com sim ou não
+        - Em seguida, ele perguntará qual comida você deseja inserir, e você digitará o nome dela, como por exemplo batata.
+        - Depois, ele deverá perguntar em qual categoria essa comida se encaixa, com algumas opções já pré-definidas, como frutas, laticínios, congelados, doces e o que mais você achar interessante.
+        - Caso você não queira mais adicionar nada na lista de compras e responder não na primeira pergunta, ele irá exibir uma lista com todos os itens agrupados, da seguinte forma:
+            Caso você adicione na sua lista:
+            banana, leite em pó, tomate, leite vegetal, chiclete, bala de ursinho, maçã, uva, abacate e leite de vaca
+            O programa deverá imprimir, por exemplo:
+            Lista de compras:
+                Frutas: banana, tomate, maçã, uva, abacate
+                Laticínios: leite vegetal, leite de vaca, leite em pó
+                Congelados:
+                Doces: chiclete e bala de ursinho
+        - Criar a opção de remover algum item da lista, que será exibida junto à pergunta de "você deseja adicionar uma comida na lista de compras"? Lembre-se que a opção de remover um item só deverá estar disponível a partir do momento que existir ao menos um elemento dentro da lista de compras.
+        - Caso a pessoa escolha essa opção, o programa irá imprimir os elementos presentes na lista atual, e a pessoa deverá escrever qual deles deseja remover.
+        - O programa irá remover o elemento da lista e imprimir a confirmação de que o item realmente não está mais lá.
+        - Por fim, ele voltará para o ciclo inicial de perguntas.
+        - Se, na hora de deletar o item, o mesmo não for encontrado na lista, você deverá exibir uma mensagem avisando isso. Por exemplo: "Não foi possível encontrar o item dentro da lista!"
+
+        */
+
+        alert('Crie sua lista de compras e divida em categorias')
+
+        let categoriaFrutas = [];
+        let categoriaLaticínios = [];
+        let categoriaVerduras = [];
+        let categoriaDoces = [];
+        let categoriaOutros = [];
+
+        let adicionarNaLista = "sim";  // valor inicial como "sim", porque a primeira vez sempre vai entrar no while
+        while (adicionarNaLista != "não") {
+
+            if (categoriaDoces.length === 0 && categoriaFrutas.length === 0 && categoriaLaticínios.length === 0 && categoriaOutros.length === 0 && categoriaVerduras.length === 0) {
+                adicionarNaLista = prompt('Você deseja adicionar uma comida na sua lista de compras? Você deve poder responder com SIM ou NÃO.');
+            } else {
+                adicionarNaLista = prompt('Você deseja adicionar uma comida na sua lista de compras? Você deve poder responder com SIM ou NÃO. Caso deseje remover um item da lista, digite REMOVER');
+            }
+
+            //enquanto o texto digitado for diferente de "sim", "não" e "remover", exibir que não foi reconhecido e perguntar novamente
+            while (adicionarNaLista != 'sim' && adicionarNaLista != 'não' && adicionarNaLista != 'remover') {
+                alert('Operação não reconhecida!')
+                adicionarNaLista = prompt('Você deseja adicionar uma comida na sua lista de compras? Você deve poder responder com SIM ou NÃO.');
+            }
+
+            if (adicionarNaLista === "não" || adicionarNaLista === 'nao') {  //se o texto lido for "não", sair do while
+                break;
+            }
+
+            if (adicionarNaLista == 'sim' || adicionarNaLista == 'SIM') {
+                let item = prompt('Qual comida você deseja inserir a lista?');
+
+                let categoria = prompt('Escolha um categoria para classificar a comida, entre elas pode escolher entre: Frutas, Laticínios, Verduras, Doces, Outros.');
+
+                if (categoria == 'frutas') {
+                    categoriaFrutas.push(item)
+                } else
+                    if (categoria == 'laticínios' || categoria == 'laticinios') {
+                        categoriaLaticínios.push(item)
+                    } else
+                        if (categoria == 'verduras') {
+                            categoriaVerduras.push(item)
+                        } else
+                            if (categoria == 'doces') {
+                                categoriaDoces.push(item)
+                            } else
+                                if (categoria == 'outros') {
+                                    categoriaOutros.push(item)
+                                }
+            }
+            //O splice() método adiciona e/ou remove elementos do array.
+            //O indexOf() método retorna a posição da primeira ocorrência de um valor em uma string. Retorna -1 se o valor não for encontrado. Diferencia maiúsculas de minúsculas.
+            else if (adicionarNaLista === 'remover') {
+
+                if (categoriaFrutas.length === 0 && categoriaLaticínios.length === 0 && categoriaDoces.length === 0 && categoriaOutros.length === 0) {  //se a lista estiver vazia (tratamento de bug, caso a pessoa digite "remover" mesmo quando forem exibidas apenas as opções "sim" e "não"
+                    alert(`A lista está vazia!`);
+                } else {  //se a lista não estiver vazia
+
+                    let remover = prompt(`Sua lista de compras:\n Frutas: ${categoriaFrutas};\n nLaticínios: ${categoriaLaticínios};\n Verduras: ${categoriaVerduras};\n Doces: ${categoriaDoces};\n Outros: ${categoriaOutros}.\n\nQual produto você deseja remover?`)
+
+                    //Se categoria existir o item que deseja remover, indexOf encontra a posição, se encontrar entra no if, que na categoria usa-se o metodo splice para remover utilizando dentro do splice novamente a categoria e indexOf e quantidade de itens que vai remover, no caso 1
+                    if (categoriaFrutas.indexOf(remover) != -1) {
+                        categoriaFrutas.splice(categoriaFrutas.indexOf(remover), 1)
+                        alert(`O item ${remover} foi removido com sucesso`)
+                    } else if (categoriaDoces.indexOf(remover) != -1) {
+                        categoriaDoces.splice(categoriaDoces.indexOf(remover), 1)
+                        alert(`O item ${remover} foi removido com sucesso`)
+                    } else if (categoriaLaticínios.indexOf(remover) != -1) {
+                        categoriaLaticínios.splice(categoriaLaticínios.indexOf(remover), 1)
+                        alert(`O item ${remover} foi removido com sucesso`)
+                    } else if (categoriaOutros.indexOf(remover) != -1) {
+                        categoriaOutros.splice(categoriaOutros.indexOf(remover), 1)
+                        alert(`O item ${remover} foi removido com sucesso`)
+                    } else if (categoriaVerduras.indexOf(remover) != -1) {
+                        categoriaOutros.splice(categoriaOutros(remover), 1)
+                        alert(`O item ${remover} foi removido com sucesso`)
+                    } else {
+                        alert(`Não foi possível encontrar o item ${remover} dentro da lista!`)
+                    }
+                }
+            }
+        }
+
+        alert(`Sua lista de compras:\n Frutas: ${categoriaFrutas};\n Laticínios: ${categoriaLaticínios};\n Verduras: ${categoriaVerduras};\n Doces: ${categoriaDoces};\n Outros: ${categoriaOutros}.`)
+
+    </script>
+</body>
+
+</html>
